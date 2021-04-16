@@ -1,30 +1,46 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import { Carousel } from "react-bootstrap"
+import Layout from "../components/Layout"
+import building2 from "../images/building2.jpeg"
+import building3 from "../images/building3.jpeg"
+import building4 from "../images/building4.jpeg"
+import Img from "gatsby-image"
+// import styled from "styled-components"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import styled from "styled-components"
-import Navbar from "../components/NavBar/Navbar"
-
-const H1 = styled.h1`
-  color: goldenrod;
-  a {
-    text-decoration: none;
-    color: coral;
-  }
-`
-
-const IndexPage = () => (
+const IndexPage = (props) => (
   <Layout>
-    <SEO title="Home" />
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Carousel>
+      <Carousel.Item>
+        <Img fluid={props.data.building.childImageSharp.fluid} alt="This is a placeholder building image" />
+        <Carousel.Caption>
+          <p>This is the first slide</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={building2} alt="building alt"></img>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={building3} alt="building alt"></img>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={building4} alt="building alt"></img>
+      </Carousel.Item>
+    </Carousel>
+    <h1>WELCOME TO OUR GROUP.</h1>
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    building: file(relativePath: { eq: "./building.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
