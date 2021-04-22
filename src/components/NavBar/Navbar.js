@@ -5,28 +5,29 @@ import { Link } from "gatsby";
 import { FaAlignJustify } from "react-icons/fa"
 import Logo from "./Logo";
 
-// const Navigation = styled.nav`
-//   height: 10vh;
-//   display: flex;
-//   background-color: #fff;
-//   position: relative;
-//   justify-content: space-between;
-//   text-transform: uppercase;
-//   border-bottom: 2px solid #33333320;
-//   margin: 0 auto;
-//   padding: 0 5vw;
-//   z-index: 2;
-//   align-self: center;
+const Navigation = styled.nav`
+  height: 10vh;
+  display: flex;
+  background-color: #fff;
+  position: relative;
+  justify-content: space-between;
+  text-transform: uppercase;
+  border-bottom: 2px solid #33333320;
+  margin: 0 auto;
+  padding: 0 5vw;
+  z-index: 2;
+  align-self: center;
+  
 
-//   @media (max-width: 768px) {
-//     position: sticky;
-//     height: 8vh;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     left: 0;
-//   }
-// `
+  @media (max-width: 768px) {
+  position: sticky;
+  height: 8vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  }
+`
 
 // const Toggle = styled.div`
 //   display: none;
@@ -94,6 +95,7 @@ import Logo from "./Logo";
 const Navbar = () => {
 
   return (
+    <Navigation>
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
@@ -111,6 +113,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </Navigation>
   )
 
     // const [navbarOpen, setNavbarOpen] = useState(false)

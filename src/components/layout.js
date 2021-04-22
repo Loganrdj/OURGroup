@@ -13,24 +13,23 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from "./NavBar/Navbar"
 import Footer from "./Footer"
 import "./layout.css"
+import styled from "styled-components"
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          author
-        }
-      }
-    }
-  `)
-
+  
   return (
     <>
       <Navbar />
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `OURGroup`} /> */}
-      <main>{children}</main>
+        <Wrapper>
+          {/* <Header siteTitle={data.site.siteMetadata?.title || `OURGroup`} /> */}
+          <main>{children}</main>
+        </Wrapper>
       <Footer />
     </>
   )
