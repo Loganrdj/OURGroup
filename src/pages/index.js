@@ -1,12 +1,9 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { Carousel } from "react-bootstrap"
-import Layout from "../components/Layout"
-import building2 from "../images/building2.jpeg"
-import building3 from "../images/building3.jpeg"
-import building4 from "../images/building4.jpeg"
-import Img from "gatsby-image"
-import styled from "styled-components"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { Carousel } from "react-bootstrap";
+import Layout from "../components/Layout";
+import Img from "gatsby-image";
+import styled from "styled-components";
 
 const CarouselStyled = styled.div`
   display: block;

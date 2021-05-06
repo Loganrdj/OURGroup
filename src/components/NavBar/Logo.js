@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link, graphql, StaticQuery } from "gatsby"
 
 const LogoWrap = styled.div`
   margin: auto 0;
@@ -11,24 +11,38 @@ const LogoWrap = styled.div`
     flex: 0 1 25px;
   }
 `
-const Logo = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(name: { eq: "gatsby-icon" }, extension: { eq: "png" }) {
-        childImageSharp {
-          fluid(maxWidth: 50, pngQuality: 80) {
-            ...GatsbyImageSharpFluid
+export default function Logo() {
+
+  return (
+    <StaticQuery query={graphql`
+      query MyQuery {
+        file(relativePath: {eq: "OURGroupLogoWhite.png"}) {
+          childImageSharp {
+            fixed(height: 140) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }
-    }
-  `)
-
-  return (
-    <LogoWrap as={Link} to="/">
-      <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
-    </LogoWrap>
+    `} render={data => (
+      <LogoWrap as={Link} to="/">
+        <Img fixed={data.file.childImageSharp.fixed} />
+      </LogoWrap>
+    )}
+    
+    />
   )
 }
 
-export default Logo
+// export const query = graphql`
+//   query MyQuery {
+//     file(relativePath: {eq: "OURGroupLogoGreen.png"}) {
+//       childImageSharp {
+//         fixed {
+//           ...GatsbyImageSharpFixed
+//         }
+//       }
+//     }
+//   }
+
+//   `

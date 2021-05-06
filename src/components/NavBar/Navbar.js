@@ -3,32 +3,32 @@ import NavbarLinks from "./NavbarLinks";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { FaAlignJustify } from "react-icons/fa"
+import "./nav.css";
 import Logo from "./Logo";
 
-const Navigation = styled.nav`
-  height: 10vh;
-  display: flex;
-  background-color: #fff;
-  position: relative;
-  justify-content: space-between;
-  text-transform: uppercase;
-  border-bottom: 2px solid #33333320;
-  margin: 0 auto;
-  padding: 0 5vw;
-  z-index: 2;
-  align-self: center;
+// const Navigation = styled.nav`
+//   height: 10vh;
+//   display: flex;
+//   background-color: #fff;
+//   position: relative;
+//   justify-content: space-around;
+//   text-transform: uppercase;
+//   border-bottom: 2px solid #33333320;
+//   margin: 0 auto;
+//   padding: 0 5vw;
+//   z-index: 2;
+//   align-self: center;
   
 
-  @media (max-width: 768px) {
-  position: sticky;
-  height: 8vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  left: 0;
-  }
-`
-
+//   @media (max-width: 768px) {
+//   position: sticky;
+//   height: 8vh;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   left: 0;
+//   }
+// `
 // const Toggle = styled.div`
 //   display: none;
 //   height: 100%;
@@ -95,25 +95,29 @@ const Navigation = styled.nav`
 const Navbar = () => {
 
   return (
-    <Navigation>
+    // <Navigation>
     <nav className="navbar">
-      <div className="nav-center">
-        <div className="nav-header">
-          <Link to="/">OURGroup</Link>
-        </div>
-        <button className="nav-btn">
-          <FaAlignJustify />
-        </button>
-        <div className="nav-links show-links">
+      {/* <NavCenter> */}
+        {/* <NavLinks> */}
+        {/* <div className="nav-links show-links"> */}
+        <div className="nav-links">
+          <Link to="/" className="nav-link" activeClassName="active-link">Home</Link>
           <Link to="/about" className="nav-link" activeClassName="active-link">About</Link>
-          <Link to="/contact" className="nav-link" activeClassName="active-link">Contact</Link>
           <Link to="/news" className="nav-link" activeClassName="active-link">News</Link>
+          {/* <Link to="/news" className="nav-link" activeClassName="active-link">News</Link> */}
+          <Link to="/" id="title"><Logo></Logo></Link>
           <Link to="/projects" className="nav-link" activeClassName="active-link">Projects</Link>
           <Link to="/research" className="nav-link" activeClassName="active-link">Research</Link>
+          <Link to="/contact" className="nav-link" activeClassName="active-link">Contact</Link>
         </div>
-      </div>
+        {/* </div> */}
+        {/* </NavLinks> */}
+        {/* <div id="nav-button-div"> */}
+          <FaAlignJustify id="nav-btn"/>
+        {/* </div> */}
+      {/* </NavCenter> */}
     </nav>
-    </Navigation>
+    // </Navigation>
   )
 
     // const [navbarOpen, setNavbarOpen] = useState(false)
@@ -138,4 +142,5 @@ const Navbar = () => {
     //     </Navigation>
     // )
 }
+
 export default Navbar

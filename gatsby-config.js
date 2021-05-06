@@ -1,13 +1,12 @@
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
     title: `OURGroup`,
     description: `OURGroup DESCRIPTION`,
     author: `Logan Moss`,
-    data: ['item 1', 'item 2'],
-    person: {
-      name:'peter',
-      age:32
-    }
+    data: ['item 1', 'item 2']
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -38,3 +37,5 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+
