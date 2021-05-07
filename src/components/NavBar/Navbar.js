@@ -95,29 +95,20 @@ import Logo from "./Logo";
 const Navbar = () => {
 
   return (
-    // <Navigation>
     <nav className="navbar">
-      {/* <NavCenter> */}
-        {/* <NavLinks> */}
-        {/* <div className="nav-links show-links"> */}
         <div className="nav-links">
           <Link to="/" className="nav-link" activeClassName="active-link">Home</Link>
           <Link to="/about" className="nav-link" activeClassName="active-link">About</Link>
           <Link to="/news" className="nav-link" activeClassName="active-link">News</Link>
-          {/* <Link to="/news" className="nav-link" activeClassName="active-link">News</Link> */}
           <Link to="/" id="title"><Logo></Logo></Link>
           <Link to="/projects" className="nav-link" activeClassName="active-link">Projects</Link>
           <Link to="/research" className="nav-link" activeClassName="active-link">Research</Link>
           <Link to="/contact" className="nav-link" activeClassName="active-link">Contact</Link>
         </div>
-        {/* </div> */}
-        {/* </NavLinks> */}
-        {/* <div id="nav-button-div"> */}
+        <div>
           <FaAlignJustify id="nav-btn"/>
-        {/* </div> */}
-      {/* </NavCenter> */}
+        </div>
     </nav>
-    // </Navigation>
   )
 
     // const [navbarOpen, setNavbarOpen] = useState(false)

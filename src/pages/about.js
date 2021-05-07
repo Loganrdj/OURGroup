@@ -1,11 +1,11 @@
-import React from 'react'
-import Layout from "../components/Layout"
-const about = () => {
-    return (
-        <Layout>
-            <h1>OURGROUP</h1>
-        </Layout>
-    )
-}
+import React from "react";
+import "./pagestyles.css";
+import Layout from "../components/Layout";
 
-export default about
+const About = () => (
+    <Layout>
+        
+    </Layout>
+)
+  
+export default About

@@ -1,4 +1,5 @@
 .navbar{
+    padding-top: 50px;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -7,8 +8,10 @@
     background-color: #7BC366;
     color: white;
     text-decoration: none !important;
-    height: 300px;
+    height: 450px;
+    
 }
+
 .nav-links{
     display: flex;
     flex-direction: row;
@@ -30,8 +33,58 @@
 #nav-btn {
     order: 2;
     align-self: flex-end;
+    display: none;
     /* styling */
+    border: white 2px !important;
 }
 #title {
     order: 0;
+}
+
+
+
+
+
+
+/* Extra large TV screens */
+@media screen and (min-width: 1200px) { 
+    
+}
+/* Desktops, large screens */
+@media screen and (max-width: 1200px) { 
+    #nav-btn {
+        display: none;
+    }
+}
+/* Small screens, laptops */
+@media screen and (max-width: 1024px) { 
+    #nav-btn {
+        display: none;
+    }
+}
+/* iPads & Tablets */
+@media screen and (max-width: 768px) { 
+    .navbar {
+        justify-content: flex-start;
+    }
+    .nav-links{
+        flex-direction: column;
+    }
+    #nav-btn {
+        display: block;
+        align-self: center;
+        height: 100%;
+    }
+    .nav-link{
+        display: none;
+    }
+    #title {
+        order: -10;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 480px) { 
+    #nav-btn {
+        display: contents;
+    }
 }
