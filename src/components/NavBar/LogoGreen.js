@@ -11,12 +11,12 @@ const LogoWrap = styled.div`
     flex: 0 1 25px;
   }
 `
-export default function Logo() {
+export default function LogoGreen() {
 
   return (
     <StaticQuery query={graphql`
-      query LogoWhiteQuery {
-        file(relativePath: {eq: "OURGroupLogoWhite.png"}) {
+      query MyQuery {
+        file(relativePath: {eq: "OURGroupLogoGreen.png"}) {
           childImageSharp {
             fixed(height: 140) {
               ...GatsbyImageSharpFixed
