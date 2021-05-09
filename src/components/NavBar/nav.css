@@ -17,18 +17,35 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 60%; /* Changes the length of the NavBar Links*/
 }
 .nav-link{
+    display: flex;
+    /* align-self: center; */
+    width: 10%;
     order: 0;
     justify-content: space-around;
     align-content:space-around;
-
+    font-size: 20px;
     /* styling */
     color: white;
+    transition: border-bottom 2s;
     text-decoration: none !important;
+}
+.nav-link:hover {
+    color: white;
+    /* border-bottom: 2px solid white; */
 }
 #nav-button-div {
     align-self: flex-end;
+}
+#nav-btn-true {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
 }
 #nav-btn {
     order: 2;
@@ -55,13 +72,20 @@
     #nav-btn {
         display: none;
     }
+    .nav-link {
+        font-size: 15px;
+    }
 }
 /* Small screens, laptops */
 @media screen and (max-width: 1024px) { 
     #nav-btn {
         display: none;
     }
+    .nav-link {
+        font-size: 13px;
+    }
 }
+
 /* iPads & Tablets */
 @media screen and (max-width: 768px) { 
     .navbar {
@@ -73,7 +97,7 @@
     #nav-btn {
         display: block;
         align-self: center;
-        height: 100%;
+        font-size: 30px;
     }
     .nav-link{
         display: none;

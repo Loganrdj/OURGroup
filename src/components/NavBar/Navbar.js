@@ -92,6 +92,13 @@ import Logo from "./Logo";
 //   }
 // `
 
+const [navbarOpen, setNavbarOpen] = useState(false)
+
+function openNav() {
+  console.log("hello")
+}
+
+
 const Navbar = () => {
 
   return (
@@ -99,19 +106,18 @@ const Navbar = () => {
         <div className="nav-links">
           <Link to="/" className="nav-link" activeClassName="active-link">Home</Link>
           <Link to="/about" className="nav-link" activeClassName="active-link">About</Link>
-          <Link to="/news" className="nav-link" activeClassName="active-link">News</Link>
-          <Link to="/" id="title"><Logo></Logo></Link>
           <Link to="/projects" className="nav-link" activeClassName="active-link">Projects</Link>
+          <Link to="/" id="title"><Logo></Logo></Link>
           <Link to="/research" className="nav-link" activeClassName="active-link">Research</Link>
+          <Link to="/news" className="nav-link" activeClassName="active-link">News</Link>
           <Link to="/contact" className="nav-link" activeClassName="active-link">Contact</Link>
         </div>
         <div>
-          <FaAlignJustify id="nav-btn"/>
+          <button id="nav-btn-true" onClick={openNav}><FaAlignJustify id="nav-btn"/></button>
         </div>
     </nav>
   )
 
-    // const [navbarOpen, setNavbarOpen] = useState(false)
 
     // return (
     //     <Navigation>

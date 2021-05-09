@@ -15,7 +15,7 @@ export default function LogoGreen() {
 
   return (
     <StaticQuery query={graphql`
-      query MyQuery {
+      query LogoGreenQuery {
         file(relativePath: {eq: "OURGroupLogoGreen.png"}) {
           childImageSharp {
             fixed(height: 140) {

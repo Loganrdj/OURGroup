@@ -1,0 +1,44 @@
+.footer-link{
+    color: black !important;
+    font-weight: bold;
+    /* text-decoration: none; */
+}
+#footer-links {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-decoration: none;
+    justify-content: space-between;
+}
+#footer-logo {
+    width: 25%;
+    justify-content: center;
+}
+#contact-div {
+    width: 25%;
+}
+#address-div {
+    width: 25%;
+    margin-right: 5%;
+}
+
+/* Extra large TV screens */
+@media screen and (min-width: 1200px) { 
+    
+}
+/* Desktops, large screens */
+@media screen and (max-width: 1200px) { 
+    
+}
+/* Small screens, laptops */
+@media screen and (max-width: 1024px) { 
+
+}
+/* iPads & Tablets */
+@media screen and (max-width: 768px) { 
+
+}
+/* Mobile */
+@media screen and (max-width: 480px) { 
+
+}
