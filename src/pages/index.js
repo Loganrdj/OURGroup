@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import "./pagestyles.css";
-
+import Slider from "../components/Slider"
 
 const CarouselStyled = styled.div`
   // display: block;
@@ -86,6 +86,7 @@ const IndexPage = (props) => (
     </CarouselStyled>
     <IndexCarouselSection>
         <h2 id="section-description">SOME OF OUR LATEST PROJECTS</h2>
+        <Slider></Slider>
     </IndexCarouselSection>
   </Layout>
 )
