@@ -2,3 +2,35 @@
     color: #7BC366;
 } */
 /* html { font-size: calc(1em + 1vw) } */
+
+
+/* Extra large TV screens */
+@media screen and (min-width: 1200px) { 
+    #index-title{
+        padding-top: 0%;
+    }
+}
+/* Desktops, large screens */
+@media screen and (max-width: 1200px) { 
+    #index-title{
+        padding-top: 0%;
+    }
+}
+/* Small screens, laptops */
+@media screen and (max-width: 1024px) { 
+    #index-title{
+        padding-top: 4%;
+    }
+}
+/* iPads & Tablets */
+@media screen and (max-width: 768px) { 
+    #index-title{
+        padding-top: 4%;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 480px) { 
+    #index-title{
+        padding-top: 4%;
+    }
+}

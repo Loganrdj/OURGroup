@@ -92,9 +92,8 @@ import Logo from "./Logo";
 //   }
 // `
 
-const [navbarOpen, setNavbarOpen] = useState(false)
-
 function openNav() {
+
   console.log("hello")
 }
 
