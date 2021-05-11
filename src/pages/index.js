@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Carousel } from "react-bootstrap";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";
@@ -85,8 +85,12 @@ const IndexPage = (props) => (
       </IndexContentDiv>
     </CarouselStyled>
     <IndexCarouselSection>
+      <div id="carousel-wrapper">
         <h2 id="section-description">SOME OF OUR LATEST PROJECTS</h2>
-        <Slider></Slider>
+        <Link to="/projects" id="project-carousel-link">View All...</Link>
+      </div>
+        
+      <Slider></Slider>
     </IndexCarouselSection>
   </Layout>
 )

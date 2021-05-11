@@ -2,12 +2,26 @@
     color: #7BC366;
 } */
 /* html { font-size: calc(1em + 1vw) } */
-
-
+#carousel-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#section-description {
+    margin-bottom: 0;
+    width: 300px;
+}
+#project-carousel-link {
+    text-decoration: none;
+    color: white;
+}
 /* Extra large TV screens */
 @media screen and (min-width: 1200px) { 
     #index-title{
         padding-top: 0%;
+    }
+    #section-description {
+        /* width: 300px; */
     }
 }
 /* Desktops, large screens */
@@ -15,11 +29,17 @@
     #index-title{
         padding-top: 0%;
     }
+    #section-description {
+        /* width: 40%; */
+    }
 }
 /* Small screens, laptops */
 @media screen and (max-width: 1024px) { 
     #index-title{
         padding-top: 4%;
+    }
+    #section-description {
+        /* width: 50%; */
     }
 }
 /* iPads & Tablets */
@@ -27,10 +47,19 @@
     #index-title{
         padding-top: 4%;
     }
+    #section-description {
+        width: 200px !important;
+        font-size: 20px !important;
+    }
+    
 }
 /* Mobile */
 @media screen and (max-width: 480px) { 
     #index-title{
         padding-top: 4%;
+    }
+    #section-description {
+        /* width: 70% !important; */
+        font-size: 20px !important;
     }
 }

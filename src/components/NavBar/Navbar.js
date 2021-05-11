@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import NavbarLinks from "./NavbarLinks";
-import styled from "styled-components";
+import React from "react";
 import { Link } from "gatsby";
 import { FaAlignJustify } from "react-icons/fa"
 import "./nav.css";

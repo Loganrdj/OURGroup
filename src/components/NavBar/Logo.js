@@ -25,9 +25,7 @@ export default function Logo() {
         }
       }
     `} render={data => (
-      <LogoWrap as={Link} to="/">
-        <Img fixed={data.file.childImageSharp.fixed} />
-      </LogoWrap>
+      <Img fixed={data.file.childImageSharp.fixed} />
     )}
     
     />
