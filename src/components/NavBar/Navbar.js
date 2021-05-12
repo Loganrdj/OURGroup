@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from "gatsby";
+import { withPrefix } from "gatsby-link"
 import { FaAlignJustify } from "react-icons/fa"
 import "./nav.css";
 import Logo from "./Logo";
@@ -94,6 +95,7 @@ function openNav() {
 
   console.log("hello")
 }
+
 
 
 const Navbar = () => {

@@ -109,6 +109,8 @@
 /* Mobile */
 @media screen and (max-width: 480px) { 
     #nav-btn {
-        display: contents;
+        display: block;
+        align-self: center;
+        font-size: 30px;
     }
 }
