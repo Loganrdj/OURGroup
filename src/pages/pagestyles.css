@@ -15,6 +15,34 @@
     text-decoration: none;
     color: white;
 }
+.about-box {
+    width: 50%;
+    height: 400px;
+}
+#about-box-div-1 {
+    background-color: #e9eaed;
+}
+#about-box-div-2 {
+    background-color: white;
+}
+#about-box-div-3 {
+    background-color: #7BC366;
+}
+#about-box-div-4 {
+    background-color: gray;
+}
+#about-box-div-5 {
+    background-color: #e9eaed;
+    width: 100%;
+}
+
+.about-layer-div {
+    display: flex;
+    height: 30%;
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
 /* Extra large TV screens */
 @media screen and (min-width: 1200px) { 
     #index-title{
