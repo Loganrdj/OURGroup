@@ -5,7 +5,6 @@ import { FaAlignJustify } from "react-icons/fa"
 import "./nav.css";
 import Logo from "./Logo";
 import { styled } from 'styled-components';
-var classNames = require("classnames");
 
 // const Navigation = styled.nav`
 //   height: 10vh;
@@ -97,14 +96,9 @@ function openNav() {
   // console.log(window.location.pathname)
 }
 
-var navBackgroundImage = classNames.bind({
-  width: "100%",
-  height: "400px",
-  backgroundImage: "url(images.unsplash.com/photo-1503951458645-643d53bfd90f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1aWxkaW5nc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80) !important"
-});
 // Helper called classNames
 
-const Navbar = ({location}) => {
+const Navbar = () => {
 
   // const [url, setUrl] = useState("");
 
@@ -113,21 +107,21 @@ const Navbar = ({location}) => {
   // // }, [url])
 
   return (
-    <div id="green-box">
-    <div className={window.location.pathname === withPrefix("/about") ? "navbar navbar-background-image" : "navbar"}>
-        <div className="nav-links">
-          <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">Home</Link>
-          <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">About</Link>
-          <Link to="/projects" state={{urlTo: "projects"}} className="nav-link" activeClassName="active-link">Projects</Link>
-          <Link to="/" state={{urlTo: "/"}} id="title"><Logo></Logo></Link>
-          <Link to="/research" state={{urlTo: "research"}} className="nav-link" activeClassName="active-link">Research</Link>
-          <Link to="/news" state={{urlTo: "news"}} className="nav-link" activeClassName="active-link">News</Link>
-          <Link to="/contact" state={{urlTo: "contact"}} className="nav-link" activeClassName="active-link">Contact</Link>
-        </div>
-        <div>
-          <button id="nav-btn-true" onClick={openNav}><FaAlignJustify id="nav-btn"/></button>
-        </div>
-    </div>
+    <div id="green-box" className={window.location.pathname === withPrefix("/about") ? "navbar-background-image" : ""}>
+      <div className={window.location.pathname === withPrefix("/about") ? "navbar green-box" : "navbar"}>
+          <div className="nav-links">
+            <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">Home</Link>
+            <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">About</Link>
+            <Link to="/projects" state={{urlTo: "projects"}} className="nav-link" activeClassName="active-link">Projects</Link>
+            <Link to="/" state={{urlTo: "/"}} id="title"><Logo></Logo></Link>
+            <Link to="/research" state={{urlTo: "research"}} className="nav-link" activeClassName="active-link">Research</Link>
+            <Link to="/news" state={{urlTo: "news"}} className="nav-link" activeClassName="active-link">News</Link>
+            <Link to="/contact" state={{urlTo: "contact"}} className="nav-link" activeClassName="active-link">Contact</Link>
+          </div>
+          <div>
+            <button id="nav-btn-true" onClick={openNav}><FaAlignJustify id="nav-btn"/></button>
+          </div>
+      </div>
     </div>
   )
 
