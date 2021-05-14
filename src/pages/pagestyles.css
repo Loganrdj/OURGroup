@@ -74,17 +74,11 @@ html { font-size: calc(1em + 1vw) }
     #index-title{
         padding-top: 0%;
     }
-    #section-description {
-        /* width: 300px; */
-    }
 }
 /* Desktops, large screens */
 @media screen and (max-width: 1200px) { 
     #index-title{
         padding-top: 0%;
-    }
-    #section-description {
-        /* width: 40%; */
     }
 }
 /* Small screens, laptops */
@@ -92,20 +86,12 @@ html { font-size: calc(1em + 1vw) }
     #index-title{
         padding-top: 4%;
     }
-    #section-description {
-        /* width: 50%; */
-    }
 }
 /* iPads & Tablets */
 @media screen and (max-width: 768px) { 
     #index-title{
         padding-top: 4%;
     }
-    #section-description {
-        /* width: 200px !important; */
-        /* font-size: 20px !important; */
-    }
-    
 }
 /* Mobile */
 @media screen and (max-width: 480px) { 
