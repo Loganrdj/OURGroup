@@ -104,29 +104,31 @@ var navBackgroundImage = classNames.bind({
 });
 // Helper called classNames
 
-const Navbar = () => {
+const Navbar = ({location}) => {
 
-  const [url, setUrl] = useState("");
+  // const [url, setUrl] = useState("");
 
-  useEffect(()=> {
-    
-  }, [url])
-  
+  // // useEffect(()=> {
+  // //   console.log(props)
+  // // }, [url])
+
   return (
-    <nav className={url === "about" ? "navbar navbar-background-image" : "navbar"}>
+    <div id="green-box">
+    <div className={window.location.pathname === withPrefix("/about") ? "navbar navbar-background-image" : "navbar"}>
         <div className="nav-links">
-          <Link to="/" onClick={() => setUrl("")} className="nav-link" activeClassName="active-link">Home</Link>
-          <Link to="/about" onClick={() => setUrl("about")} className="nav-link" activeClassName="active-link">About</Link>
-          <Link to="/projects" onClick={() => setUrl("projects")} className="nav-link" activeClassName="active-link">Projects</Link>
-          <Link to="/" onClick={() => setUrl("")} id="title"><Logo></Logo></Link>
-          <Link to="/research" onClick={() => setUrl("research")} className="nav-link" activeClassName="active-link">Research</Link>
-          <Link to="/news" onClick={() => setUrl("news")} className="nav-link" activeClassName="active-link">News</Link>
-          <Link to="/contact" onClick={() => setUrl("contact")} className="nav-link" activeClassName="active-link">Contact</Link>
+          <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">Home</Link>
+          <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">About</Link>
+          <Link to="/projects" state={{urlTo: "projects"}} className="nav-link" activeClassName="active-link">Projects</Link>
+          <Link to="/" state={{urlTo: "/"}} id="title"><Logo></Logo></Link>
+          <Link to="/research" state={{urlTo: "research"}} className="nav-link" activeClassName="active-link">Research</Link>
+          <Link to="/news" state={{urlTo: "news"}} className="nav-link" activeClassName="active-link">News</Link>
+          <Link to="/contact" state={{urlTo: "contact"}} className="nav-link" activeClassName="active-link">Contact</Link>
         </div>
         <div>
           <button id="nav-btn-true" onClick={openNav}><FaAlignJustify id="nav-btn"/></button>
         </div>
-    </nav>
+    </div>
+    </div>
   )
 
 

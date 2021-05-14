@@ -12,17 +12,65 @@ const StyledImage = styled.div`
     padding-right: 10px;
     max-width: 80rem;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-top: 50px;
+    // margin-bottom: 2rem;
+    /* Extra large TV screens */
+    @media screen and (min-width: 1200px) { 
+        
+    }
+    /* Desktops, large screens */
+    @media screen and (max-width: 1200px) { 
+        
+    }
+    /* Small screens, laptops */
+    @media screen and (max-width: 1024px) { 
+
+    }
+    /* iPads & Tablets */
+    @media screen and (max-width: 768px) { 
+      margin-top: 0px;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) { 
+      margin-top: 0px;
+    }
   `;
 
 export default function SimpleSlider() {
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
-    };
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
     return (
       
         <StaticQuery query={graphql`

@@ -9,15 +9,17 @@
     color: white;
     text-decoration: none !important;
     height: 450px;
-    
 }
-
+#green-box {
+    background: #7BC366;
+}
 .nav-links{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 60%; /* Changes the length of the NavBar Links*/
+    /* background: rgb(124,196,99, .6); */
 }
 .nav-link{
     display: flex;

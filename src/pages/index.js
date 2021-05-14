@@ -25,7 +25,6 @@ const IndexContentDiv = styled.div`
   color: #7BC366 !important;
   h1 {
     color: #7BC366 !important;
-    font-size: 40px;
   }
   #index-title {
     width: 80%;
@@ -48,11 +47,11 @@ const IndexContentDiv = styled.div`
 const IndexCarouselSection = styled.div`
   background-color: #7BC366;
   color: white;
-  padding: 3% 14% 4% 14%;
+  padding: 6% 14% 8% 14%;
+  height: 50%;
   @media only screen and (max-width: 600px) {
-
     #section-description { //media query
-      font-size: 13px;
+      // font-size: 13px;
       width: 100%;
     }
   }
@@ -87,9 +86,8 @@ const IndexPage = (props) => (
     <IndexCarouselSection>
       <div id="carousel-wrapper">
         <h2 id="section-description">SOME OF OUR LATEST PROJECTS</h2>
-        <Link to="/projects" id="project-carousel-link">View All...</Link>
+        <Link to="/projects" id="project-carousel-link">View All ›</Link>
       </div>
-        
       <Slider></Slider>
     </IndexCarouselSection>
   </Layout>

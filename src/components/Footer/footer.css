@@ -8,18 +8,21 @@
     flex-direction: column;
     width: 25%;
     text-decoration: none;
-    justify-content: space-between;
+    justify-content: baseline;
+    font-size: 50%;
 }
 #footer-logo {
     width: 25%;
-    justify-content: center;
+    justify-content: baseline;
 }
 #contact-div {
     width: 25%;
+    font-size: 50%;
 }
 #address-div {
     width: 25%;
     margin-right: 5%;
+    font-size: 50%;
 }
 
 /* Extra large TV screens */
@@ -40,5 +43,7 @@
 }
 /* Mobile */
 @media screen and (max-width: 480px) { 
-
+    #footer-logo {
+        display: none;
+    }
 }

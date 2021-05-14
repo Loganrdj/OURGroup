@@ -14,6 +14,38 @@ const FooterWrap = styled.div`
     padding-right: 14%;
     background-color: rgb(248,248,255);
     
+    /* Extra large TV screens */
+    @media screen and (min-width: 1200px) { 
+        
+    }
+    /* Desktops, large screens */
+    @media screen and (max-width: 1200px) { 
+        
+    }
+    /* Small screens, laptops */
+    @media screen and (max-width: 1024px) { 
+        #footer-logo {
+            display: none;
+        }
+        justify-content: center;
+        align-items: flex-start
+    }
+    /* iPads & Tablets */
+    @media screen and (max-width: 768px) { 
+        #footer-logo {
+            display: none;
+        }
+        justify-content: center;
+        align-items: flex-start
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) { 
+        #footer-logo {
+            display: none;
+        }
+        justify-content: center;
+        align-items: flex-start;
+    }
 `
 
 const Footer = () => {

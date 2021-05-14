@@ -30,15 +30,7 @@ const AboutBoxDiv3 = styled.div`
     flex-flow: wrap;
     padding-right: 8%;
     text-align: right;
-`
-const AboutBoxDiv4 = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    flex-flow: wrap;
-    padding-left: 8%;
+    padding-left: 20%;
 `
 const AboutBoxDiv5 = styled.div`
     display: flex;
@@ -67,15 +59,14 @@ const About = (props) => (
             <div id="about-box-div-3" className="about-box">
                 <AboutBoxDiv3>
                     <h1>Company History</h1>
-                    <p>Pariatur cupidatat ullamco ad nisi aute excepteur cillum incididunt do. Voluptate sunt excepteur occaecat consectetur. Officia proident adipisicing officia occaecat officia. Velit veniam elit excepteur deserunt mollit proident voluptate enim. Exercitation Lorem sunt proident dolor laborum. Laboris magna nostrud id occaecat minim mollit consequat esse adipisicing.</p>
-                    <p>Nostrud consequat pariatur ex voluptate velit enim reprehenderit laborum officia proident proident irure qui officia. Cillum ad sunt irure culpa nostrud ullamco Lorem non ullamco qui ipsum aliquip ullamco. In cupidatat exercitation est voluptate nostrud.</p>
+                    <p>Pariatur cupidatat ullamco ad nisi aute excepteur cillum incididunt do. Voluptate sunt excepteur occaecat consectetur. Officia proident adipisicing officia occaecat officia. Velit veniam elit excepteur deserunt mollit proident voluptate enim. </p>
+                    <p>Nostrud consequat pariatur ex voluptate velit enim reprehenderit laborum officia proident proident irure qui officia. </p>
                 </AboutBoxDiv3>
             </div>
             <div id="about-box-div-4" className="about-box">
-                <AboutBoxDiv4>
-                    {console.log(props)}
-                    <Img fluid={props.data.allFile.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
-                </AboutBoxDiv4>
+                <div>
+                    <Img fluid={props.data.allFile.edges[4].node.childImageSharp.fluid} alt="This is a placeholder building image" />
+                </div>
             </div>
         </div> 
         <div className="about-layer-div">
@@ -102,7 +93,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 1500, maxHeight: 1000) {
+            fluid(maxWidth: 1200, maxHeight: 800) {
               ...GatsbyImageSharpFluid
             }
           }

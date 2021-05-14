@@ -1,7 +1,7 @@
 /* h1 {
     color: #7BC366;
 } */
-/* html { font-size: calc(1em + 1vw) } */
+html { font-size: calc(1em + 1vw) }
 #carousel-wrapper {
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@
 }
 #section-description {
     margin-bottom: 0;
-    width: 300px;
+    width: 600px;
 }
 #project-carousel-link {
     text-decoration: none;
@@ -17,11 +17,14 @@
 }
 .navbar-background-image {
     background-image: url(https://images.unsplash.com/photo-1494768788897-7fdaa00de2a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80);
-    opacity: .8;
+    opacity: .5;
+    color: #7BC366 !important;
+    background-color: #7BC366 !important;
 }
+
 .about-box {
     width: 50%;
-    height: 400px;
+    height: 110vh;
 }
 #about-box-div-1 {
     background-color: #e9eaed;
@@ -35,11 +38,17 @@
     color: black;
 }
 #about-box-div-3 {
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: #7BC366;
     color: white;
 }
 #about-box-div-4 {
     background-color: gray;
+}
+#about-box-div-4 div{
+    width: 100%;
+    height: 100%;
 }
 #about-box-div-5 {
     background-color: #e9eaed;
@@ -48,10 +57,17 @@
 
 .about-layer-div {
     display: flex;
-    height: 30%;
     margin-left: 14%;
     margin-right: 14%;
 }
+
+/* react-slick css */
+/* .slick-slide {
+    margin: 0 10px !important;
+}
+.slick-list {
+    margin: 0 -100px !important;
+} */
 
 /* Extra large TV screens */
 @media screen and (min-width: 1200px) { 
@@ -86,8 +102,8 @@
         padding-top: 4%;
     }
     #section-description {
-        width: 200px !important;
-        font-size: 20px !important;
+        /* width: 200px !important; */
+        /* font-size: 20px !important; */
     }
     
 }
@@ -98,6 +114,6 @@
     }
     #section-description {
         /* width: 70% !important; */
-        font-size: 20px !important;
+        font-size: 24px;
     }
 }
