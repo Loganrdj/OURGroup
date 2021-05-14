@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import styled from "styled-components";
-import { Link, graphql, StaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import LogoGreen from "../NavBar/LogoGreen";
 
 const FooterWrap = styled.div`

@@ -15,18 +15,28 @@
     text-decoration: none;
     color: white;
 }
+.navbar-background-image {
+    background-image: url(https://images.unsplash.com/photo-1494768788897-7fdaa00de2a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80);
+    opacity: .8;
+}
 .about-box {
     width: 50%;
     height: 400px;
 }
 #about-box-div-1 {
     background-color: #e9eaed;
+    align-self: center;
 }
 #about-box-div-2 {
     background-color: white;
+    color: #7BC366;
+}
+#about-box-div-2 p {
+    color: black;
 }
 #about-box-div-3 {
     background-color: #7BC366;
+    color: white;
 }
 #about-box-div-4 {
     background-color: gray;
