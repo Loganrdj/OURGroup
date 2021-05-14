@@ -20,6 +20,7 @@ const AboutBoxDiv2 = styled.div`
     align-items: center;
     flex-flow: wrap;
     padding-left: 8%;
+    padding-right: 20%;
 `
 const AboutBoxDiv3 = styled.div`
     display: flex;

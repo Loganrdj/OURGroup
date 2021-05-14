@@ -57,8 +57,8 @@ html { font-size: calc(1em + 1vw) }
 
 .about-layer-div {
     display: flex;
-    margin-left: 14%;
-    margin-right: 14%;
+    /* margin-left: 14%;
+    margin-right: 14%; */
 }
 
 /* react-slick css */
