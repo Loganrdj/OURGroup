@@ -110,13 +110,13 @@ const Navbar = () => {
     <div id="green-box" className={window.location.pathname === withPrefix("/about") ? "navbar-background-image" : ""}>
       <div className={window.location.pathname === withPrefix("/about") ? "navbar green-box" : "navbar"}>
           <div className="nav-links">
-            <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">Home</Link>
-            <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">About</Link>
-            <Link to="/projects" state={{urlTo: "projects"}} className="nav-link" activeClassName="active-link">Projects</Link>
+            <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">HOME</Link>
+            <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">ABOUT</Link>
+            <Link to="/projects" state={{urlTo: "projects"}} className="nav-link" activeClassName="active-link">PROJECTS</Link>
             <Link to="/" state={{urlTo: "/"}} id="title"><Logo></Logo></Link>
-            <Link to="/research" state={{urlTo: "research"}} className="nav-link" activeClassName="active-link">Research</Link>
-            <Link to="/news" state={{urlTo: "news"}} className="nav-link" activeClassName="active-link">News</Link>
-            <Link to="/contact" state={{urlTo: "contact"}} className="nav-link" activeClassName="active-link">Contact</Link>
+            <Link to="/research" state={{urlTo: "research"}} className="nav-link" activeClassName="active-link">RESEARCH</Link>
+            <Link to="/news" state={{urlTo: "news"}} className="nav-link" activeClassName="active-link">NEWS</Link>
+            <Link to="/contact" state={{urlTo: "contact"}} className="nav-link" activeClassName="active-link">CONTACT</Link>
           </div>
           <div>
             <button id="nav-btn-true" onClick={openNav}><FaAlignJustify id="nav-btn"/></button>

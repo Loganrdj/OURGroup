@@ -13,6 +13,17 @@ const FooterWrap = styled.div`
     padding-left: 13%;
     padding-right: 14%;
     background-color: rgb(248,248,255);
+    font-family: "ITCKabelStd-Book";
+    #address-title {
+        font-family: "ITCKabelStd-Demi";
+    }
+    #contact-title {
+        font-family: "ITCKabelStd-Demi";
+    }
+    #footer-links {
+        font-family: "ITCKabelStd-Demi";
+        justify-content: space-evenly;
+    }
     
     /* Extra large TV screens */
     @media screen and (min-width: 1200px) { 
@@ -56,11 +67,11 @@ const Footer = () => {
                     <LogoGreen></LogoGreen>
                 </div>
                 <div id="footer-links">
-                    <Link to="/about" className="footer-link" activeClassName="active-link">About Us</Link>
-                    <Link to="/projects" className="footer-link" activeClassName="active-link">Projects</Link>
-                    <Link to="/research" className="footer-link" activeClassName="active-link">Research</Link>
-                    <Link to="/news" className="footer-link" activeClassName="active-link">News</Link>
-                    <Link to="/contact" className="footer-link" activeClassName="active-link">Contact Us</Link>
+                    <Link to="/about" className="footer-link" activeClassName="active-link">ABOUT US</Link>
+                    <Link to="/projects" className="footer-link" activeClassName="active-link">PROJECTS</Link>
+                    <Link to="/research" className="footer-link" activeClassName="active-link">RESEARCH</Link>
+                    <Link to="/news" className="footer-link" activeClassName="active-link">NEWS</Link>
+                    <Link to="/contact" className="footer-link" activeClassName="active-link">CONTACT US</Link>
                 </div>
                 <div id="address-div">
                     <p id="address-title"><strong>Address</strong></p>

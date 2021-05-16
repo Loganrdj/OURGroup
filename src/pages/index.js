@@ -22,25 +22,45 @@ const CarouselStyled = styled.div`
 `
 
 const IndexContentDiv = styled.div`
-  color: #7BC366 !important;
   h1 {
     color: #7BC366 !important;
   }
   #index-title {
-    width: 80%;
+    width: 50%;
   }
   #index-description {
     width: 70%;
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 18%;
   }
-  margin-top: 5%;
+  margin-top: 10%;
+  @media screen and (max-width: 1200px) { 
+    #index-title{
+      width: 52%;
+    }
+}
+  @media only screen and (max-width: 1024px) {
+    #index-title {
+      width: 65%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    #index-title {
+      width: 80%;
+    }
+  }
   @media only screen and (max-width: 600px) {
-
+    #index-title {
+      width: 100%;
+    }
     #index-description { //media query
       font-size: 15px;
       width: 100%;
     }
+  }
+  p {
+    font-family: "ITCKabelStd-Book"
+    color: black;
   }
 `
 
@@ -79,8 +99,8 @@ const IndexPage = (props) => (
         </Carousel.Item>
       </Carousel>
       <IndexContentDiv>
-        <h1 id="index-title">WELCOME TO OUR GROUP</h1>
-        <h5 id="index-description">Id ex exercitation sit et tempor cillum fugiat adipisicing anim dolor anim ad pariatur. Ipsum voluptate tempor sint ullamco est mollit cillum dolore magna exercitation enim dolore. Ipsum et est nulla aliquip. Minim eu nulla nostrud laboris. Ea proident officia irure proident nulla. Aliqua aute qui nisi dolor sunt labore adipisicing consectetur quis.</h5>
+        <h1 id="index-title">WELCOME TO OUR GROUP.</h1>
+        <p id="index-description">Id ex exercitation sit et tempor cillum fugiat adipisicing anim dolor anim ad pariatur. Ipsum voluptate tempor sint ullamco est mollit cillum dolore magna exercitation enim dolore. Ipsum et est nulla aliquip. Minim eu nulla nostrud laboris. Ea proident officia irure proident nulla. Aliqua aute qui nisi dolor sunt labore adipisicing consectetur quis.</p>
       </IndexContentDiv>
     </CarouselStyled>
     <IndexCarouselSection>

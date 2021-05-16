@@ -1,7 +1,25 @@
 /* h1 {
     color: #7BC366;
 } */
-html { font-size: calc(1em + 1vw) }
+@font-face {
+    font-family: "ITCKabelStd-Book";
+    src: url("../../fonts/ITCKabelStd-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: "ITCKabelStd-Bold";
+    src: url("../../fonts/ITCKabelStd-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "ITCKabelStd-Demi";
+    src: url("../../fonts/ITCKabelStd-Demi.otf") format("opentype");
+}
+@font-face {
+    font-family: "ITCKabelStd-Ultra";
+    src: url("../../fonts/ITCKabelStd-Ultra.otf") format("opentype");
+}
+html { 
+    font-size: calc(1em + 1vw);
+}
 #carousel-wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,7 +34,9 @@ html { font-size: calc(1em + 1vw) }
     color: white;
 }
 
-
+.mobile-display {
+    display: none;
+}
 .about-box {
     width: 50%;
     height: 110vh;
@@ -49,11 +69,21 @@ html { font-size: calc(1em + 1vw) }
     background-color: #e9eaed;
     width: 100%;
 }
+#about-box-div-6 {
+    height: 300px;
+}
 
 .about-layer-div {
     display: flex;
+    flex-flow: row wrap;
     /* margin-left: 14%;
     margin-right: 14%; */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ITCKabelStd-Demi';
+}
+p {
+    font-family: 'ITCKabelStd-Book';
 }
 
 /* react-slick css */
@@ -74,24 +104,58 @@ html { font-size: calc(1em + 1vw) }
 @media screen and (max-width: 1200px) { 
     #index-title{
         padding-top: 0%;
+        width: 52%;
     }
 }
 /* Small screens, laptops */
 @media screen and (max-width: 1024px) { 
     #index-title{
         padding-top: 4%;
+        width: 65%;
     }
 }
 /* iPads & Tablets */
 @media screen and (max-width: 768px) { 
     #index-title{
         padding-top: 4%;
+        width: 80%;
     }
 }
+/* Mobile + */
+@media only screen and (max-width: 600px) {
+    .about-box {
+        width: 100%;
+    }
+    #about-box-div-1, #about-box-div-4 {
+        display: none;
+    }
+    #logo-div {
+        width: 50vh;
+    }
+    #index-title {
+      width: 100%;
+    }
+    #index-description {
+      font-size: 15px;
+      width: 100%;
+    }
+    .non-display {
+        display: none !important;
+    }
+    .mobile-display {
+        display: block;
+    }
+  }
 /* Mobile */
 @media screen and (max-width: 480px) { 
     #index-title{
         padding-top: 4%;
+    }
+    .non-display {
+        display: none !important;
+    }
+    .mobile-display {
+        display: block;
     }
     #section-description {
         /* width: 70% !important; */
