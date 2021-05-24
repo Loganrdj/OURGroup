@@ -94,6 +94,24 @@ p {
     margin: 0 -100px !important;
 } */
 
+#projects-background {
+    background-color: #7BC366
+}
+#projects-carousel-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #7BC366;
+}
+#projects-section-description {
+    margin-bottom: 0;
+    width: 600px;
+    color: #7BC366;
+}
+#project-page-carousel-link {
+    color: #7BC366;
+}
+
 /* Extra large TV screens */
 @media screen and (min-width: 1200px) { 
     #index-title{
@@ -157,7 +175,7 @@ p {
     .mobile-display {
         display: block;
     }
-    #section-description {
+    #section-description, #projects-section-description {
         /* width: 70% !important; */
         font-size: 24px;
     }

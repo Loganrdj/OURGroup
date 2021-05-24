@@ -105,7 +105,7 @@ const Navbar = () => {
   // // useEffect(()=> {
   // //   console.log(props)
   // // }, [url])
-
+  const window = global.window;
   return (
     <div id="green-box" className={window.location.pathname === withPrefix("/about") ? "navbar-background-image" : ""}>
       <div className={window.location.pathname === withPrefix("/about") ? "navbar green-box" : "navbar"}>

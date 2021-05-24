@@ -6,7 +6,17 @@ module.exports = {
     title: `OURGroup`,
     description: `OURGroup DESCRIPTION`,
     author: `Logan Moss`,
-    data: ['item 1', 'item 2']
+    data: ['item 1', 'item 2'],
+    portfolioData: [
+      {
+        name: "project1",
+        description: "Laborum qui reprehenderit irure ipsum et id fugiat fugiat sunt."
+      },
+      {
+        name: "project2",
+        description: "Aliqua aliqua duis Lorem qui quis."
+      }
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
