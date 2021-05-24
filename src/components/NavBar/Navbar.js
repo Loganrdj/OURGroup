@@ -97,7 +97,7 @@ function openNav() {
 }
 
 // Helper called classNames
-
+const isBrowser = typeof window !== "undefined";
 const Navbar = () => {
 
   // const [url, setUrl] = useState("");
@@ -105,10 +105,11 @@ const Navbar = () => {
   // // useEffect(()=> {
   // //   console.log(props)
   // // }, [url])
-  const window = global.window;
+  
   return (
     <div id="green-box" className={window.location.pathname === withPrefix("/about") ? "navbar-background-image" : ""}>
-      <div className={window.location.pathname === withPrefix("/about") ? "navbar green-box" : "navbar"}>
+      <div className={
+          window.location.pathname === withPrefix("/about") ? "navbar green-box" : "navbar"}>
           <div className="nav-links">
             <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">HOME</Link>
             <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">ABOUT</Link>
