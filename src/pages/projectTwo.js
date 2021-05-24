@@ -64,29 +64,29 @@ const ProjectDetailDiv = styled.div`
     }
 `
 
-const projectOne = (data) => (
+const projectTwo = (data) => (
     <Layout>
       <ProjectDetailDiv>
         <div className="project-description-div">
-          <h6>{data.data.site.siteMetadata.portfolioData[0].name}</h6>
+          <h6>{data.data.site.siteMetadata.portfolioData[1].name}</h6>
           <p className="project-title-strong">Owner:</p>
-          <p>{data.data.site.siteMetadata.portfolioData[0].owner}</p>
+          <p>{data.data.site.siteMetadata.portfolioData[1].owner}</p>
           <p className="project-title-strong">Scale: </p>
-          <p>{data.data.site.siteMetadata.portfolioData[0].scale}</p>
+          <p>{data.data.site.siteMetadata.portfolioData[1].scale}</p>
           <p className="project-title-strong">Location:</p>
-          <p>{data.data.site.siteMetadata.portfolioData[0].location}</p>
+          <p>{data.data.site.siteMetadata.portfolioData[1].location}</p>
         </div>
         
         <div className="project-body-div">
           <div>
             <Img className="project-image" fluid={data.data.allFile.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
           </div>
-          <p>{data.data.site.siteMetadata.portfolioData[0].firstDescription}</p>
+          <p>{data.data.site.siteMetadata.portfolioData[1].firstDescription}</p>
           <div className="split-image-div">
             <Img className="project-image" fluid={data.data.allFile.edges[1].node.childImageSharp.fluid} alt="This is a placeholder building image" />
             <Img className="project-image" fluid={data.data.allFile.edges[2].node.childImageSharp.fluid} alt="This is a placeholder building image" />
           </div>
-          <p>{data.data.site.siteMetadata.portfolioData[0].secondDescription}</p>
+          <p>{data.data.site.siteMetadata.portfolioData[1].secondDescription}</p>
           <div>
             <Img className="project-image" fluid={data.data.allFile.edges[3].node.childImageSharp.fluid} alt="This is a placeholder building image" />
           </div>
@@ -105,10 +105,10 @@ const projectOne = (data) => (
     </Layout>
 )
   
-export default projectOne
+export default projectTwo
 
 export const query = graphql`
-query projectOneQuery {
+query projectTwoQuery {
   allFile(filter: {relativePath: {glob: "building-project*"}}) {
     edges {
       node {

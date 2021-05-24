@@ -22,12 +22,15 @@ const IndexCarouselSection = styled.div`
         color: #7BC366;
     }
 `
+const projectsGallery = styled.div`
+    display: flex;
+`
 
 const Projects = (data) => (
     <Layout>
         <div id="projects-background">
-            <h1>Hello</h1>
-            <ProjectComponent props={data.data.site.siteMetadata.portfolioData[0]} />
+            {/* <h1>Hello</h1>
+            <ProjectComponent props={data.data.site.siteMetadata.portfolioData[0]} /> */}
         </div>
         <IndexCarouselSection>
         <div id="projects-carousel-wrapper">
@@ -46,7 +49,6 @@ query PortfolioData {
     site {
       siteMetadata {
         portfolioData {
-          description
           name
         }
       }

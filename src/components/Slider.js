@@ -92,44 +92,45 @@ export default function SimpleSlider() {
                 <Slider {...settings}>
                     <div>
                         <StyledImage>
-                        <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
-                          <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} alt="Hello"/>
-                        </Link>
+                        {/* <Link to="/projectOne" state={{urlTo: "/projectOne"}}> */}
+                          <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} alt="projectOne Image"/>
+                        {/* </Link> */}
+                        {/* <p>hello</p> */}
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
-                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
-                            <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} alt="Hello"/>
-                          </Link>
+                          {/* <Link to="/projectOne" state={{urlTo: "/projectOne"}}> */}
+                            <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} alt="projectOne Image"/>
+                          {/* </Link> */}
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
-                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
-                            <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} alt="Hello"/>
-                          </Link>
+                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
+                            <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} alt="projectTwo Image"/>
+                          {/* </Link> */}
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
-                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
-                            <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid} alt="Hello"/>
-                          </Link>
+                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
+                            <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid} alt="projectTwo Image"/>
+                          {/* </Link> */}
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
-                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
-                            <Img fluid={data.allFile.edges[4].node.childImageSharp.fluid} alt="Hello"/>
-                          </Link>
+                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
+                            <Img fluid={data.allFile.edges[4].node.childImageSharp.fluid} alt="projectTwo Image"/>
+                          {/* </Link> */}
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
-                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
-                            <Img fluid={data.allFile.edges[5].node.childImageSharp.fluid} alt="Hello"/>
-                          </Link>
+                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
+                            <Img fluid={data.allFile.edges[5].node.childImageSharp.fluid} alt="HelprojectTwo Imagelo"/>
+                          {/* </Link> */}
                         </StyledImage>
                     </div>
                 </Slider>
