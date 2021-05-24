@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 const Research = () => (
     <Layout>
-        
+        <></>
     </Layout>
 )
   

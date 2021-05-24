@@ -20,6 +20,19 @@
 html { 
     font-size: calc(1em + 1vw);
 }
+/* Remove scroll bar */
+body::-webkit-scrollbar { 
+    display: none;
+}
+.index-description-link {
+    text-decoration: none !important;
+    color: #7BC366;
+    border-bottom: 2px solid #7BC366;
+    font-weight: bold;
+}
+.index-description-link:hover {
+    color: #3a7429
+}
 #carousel-wrapper {
     display: flex;
     justify-content: space-between;
@@ -48,9 +61,11 @@ html {
 #about-box-div-2 {
     background-color: white;
     color: #7BC366;
+    
 }
 #about-box-div-2 p {
     color: black;
+    font-size: .7em
 }
 #about-box-div-3 {
     padding-top: 5%;

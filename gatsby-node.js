@@ -11,7 +11,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         module: {
           rules: [
             {
-              test: /Navbar-js/,
+              test: /Navbar/,
               use: loaders.null(),
             },
           ],

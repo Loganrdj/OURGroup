@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Img from "gatsby-image";
 import styled from "styled-components";
-
+import { Link } from "gatsby";
 
 const StyledImage = styled.div`
     border-radius: 1rem;
@@ -74,45 +74,62 @@ export default function SimpleSlider() {
     return (
       
         <StaticQuery query={graphql`
-            query carouselIndexQuery {
-                allFile(filter: {relativePath: {glob: "building*"}}) {
-                  edges {
-                    node {
-                      childImageSharp {
-                        fluid(maxWidth: 1000, maxHeight: 500) {
-                          ...GatsbyImageSharpFluid
-                        }
-                      }
+          query carouselIndexQuery {
+            allFile(filter: {relativePath: {glob: "building-project*"}}) {
+              edges {
+                node {
+                  childImageSharp {
+                    fluid(maxWidth: 1000, maxHeight: 500) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
               }
+            }
+          }
             `} 
             render={data => (
                 <Slider {...settings}>
                     <div>
                         <StyledImage>
-                            <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} alt="Hello"/>
+                        <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
+                          <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} alt="Hello"/>
+                        </Link>
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
+                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
                             <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} alt="Hello"/>
+                          </Link>
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
+                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
                             <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} alt="Hello"/>
+                          </Link>
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
+                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
                             <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid} alt="Hello"/>
+                          </Link>
                         </StyledImage>
                     </div>
                     <div>
                         <StyledImage>
+                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
                             <Img fluid={data.allFile.edges[4].node.childImageSharp.fluid} alt="Hello"/>
+                          </Link>
+                        </StyledImage>
+                    </div>
+                    <div>
+                        <StyledImage>
+                          <Link to="/projectOne" state={{urlTo: "/projectOne"}}>
+                            <Img fluid={data.allFile.edges[5].node.childImageSharp.fluid} alt="Hello"/>
+                          </Link>
                         </StyledImage>
                     </div>
                 </Slider>

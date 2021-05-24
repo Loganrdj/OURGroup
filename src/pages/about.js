@@ -39,6 +39,7 @@ const AboutBoxDiv3 = styled.div`
     padding-left: 20%;
     p {
         color: white;
+        font-size: .7em;
     }
 `
 const AboutBoxDiv5 = styled.div`
@@ -76,7 +77,6 @@ const AboutBoxDiv6 = styled.div`
 
 const About = (props) => (
     <Layout>
-        {console.log(props)}
         <div className="about-layer-div">
             <div id="about-box-div-1" className="about-box">
                 <AboutBoxDiv1>
@@ -88,7 +88,7 @@ const About = (props) => (
             <div id="about-box-div-2" className="about-box">
                 <AboutBoxDiv2>
                     <h1>URBAN RENEWAL REDEFINED.</h1>
-                    <p>Et laborum exercitation ad sint enim anim consequat laboris in sint amet incididunt esse. Elit labore culpa laboris ea aute Lorem laborum enim. Minim id culpa exercitation culpa consectetur do eiusmod.</p>
+                    <p>OUR (Office for Urban Renewal) Group is a professional architecture firm that specializes in research and practice in the fields of Chinese heritage protection and urban renewal. We integrate asset management-thinking into our design and technology to form a service model with planning design and engineering technology consulting at its core. OUR Group’s project consultants are experts in business planning, and work to achieve the perfect mixture of cultural inheritance, asset appreciation, and branding for the project. Founded by a master of heritage protection from Tongji University, Shanghai Urban Renewal Industry Co., Ltd. was founded and registered in 2014. To date, OUR Group has 1 invention patent and 31 utility model patents. In 2017, we were recognized as a national high-tech enterprise. Over 31% of the total number of our company’s employees hold masters and doctorates from international universities, and over 20 of which hold director and senior titles in architecture, planning, structure, and mechanical and electrical engineering.</p>
                 </AboutBoxDiv2>
             </div>
         </div>
@@ -96,8 +96,8 @@ const About = (props) => (
             <div id="about-box-div-3" className="about-box">
                 <AboutBoxDiv3>
                     <h1>COMPANY HISTORY</h1>
-                    <p>Pariatur cupidatat ullamco ad nisi aute excepteur cillum incididunt do. Voluptate sunt excepteur occaecat consectetur. Officia proident adipisicing officia occaecat officia. Velit veniam elit excepteur deserunt mollit proident voluptate enim. </p>
-                    <p>Nostrud consequat pariatur ex voluptate velit enim reprehenderit laborum officia proident proident irure qui officia. </p>
+                    <p>Based in Shanghai, OUR Group has established multiple branches and offices in Nanjing, Qingdao, Chengdu and other cities to provide research and evaluation, positioning planning, planning and design, engineering for the protection and renewal of Chinese heritage, the renovation of existing buildings, and cultural tourism projects.</p>
+                    <p>Since our establishment, OUR Group has successively completed more than 300 projects, including historical building repairs, architectural renovations, and district renewal. We have repeatedly won the Design Excellence Award of the Architectural Society of China and the Shanghai Architectural Society, as well as many other industry awards.  </p>
                 </AboutBoxDiv3>
             </div>
             <div id="about-box-div-4" className="about-box">

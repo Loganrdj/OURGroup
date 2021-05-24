@@ -1,7 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import Img from "gatsby-image"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 
 
 export default function LogoGreenAbout() {

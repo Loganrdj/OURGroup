@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 const News = () => (
     <Layout>
-        
+        <></>
     </Layout>
 )
   
