@@ -4,8 +4,18 @@ import { withPrefix } from "gatsby-link";
 import { FaAlignJustify } from "react-icons/fa";
 import "./nav.css";
 import Logo from "./Logo";
+import isInBrowser from "./isInBrowser";
 
-
+if(isInBrowser) {
+  var pathCheck = window.location.pathname
+  var pathBool = false;
+  console.log(pathCheck)
+  if(pathCheck.includes("about")){
+    pathBool = true;
+  } else {
+    pathBool = false;
+  }
+}
 
 function openNav() {
 
@@ -28,8 +38,8 @@ class Navbar extends React.Component {
   
   render(){
     return (
-      <div id="green-box" className={window.location.pathname === withPrefix("/about") ? "navbar-background-image" : ""}>
-        <div className={window.location.pathname === withPrefix("/about") ? "navbar green-box" : "navbar"}>
+      <div  className={pathBool ? "navbar-background-image" : ""}>
+        <div className={pathBool ? "navbar green-box" : "navbar"}>
             <div className="nav-links">
               <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">HOME</Link>
               <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">ABOUT</Link>

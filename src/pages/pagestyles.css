@@ -127,6 +127,34 @@ p {
     color: #7BC366;
 }
 
+/* Projects Page */
+.grayscale-image {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.grayscale-image:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transition: filter 1s;
+}
+.margin-up {
+    margin-top: -4.5rem;
+    z-index: 1000000;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 2.5rem;
+}
+.projects-row {
+    margin-bottom: 1rem;
+}
+.projects-row h6, .projects-row p{
+    font-size: .7rem;
+}
+.projects-row h6 {
+    margin-bottom: 0;
+}
+
 /* Extra large TV screens */
 @media screen and (min-width: 1200px) { 
     #index-title{
