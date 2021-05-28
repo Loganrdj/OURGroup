@@ -1,32 +1,32 @@
 import React from "react";
-import {Link} from "gatsby";
+import { Link, graphql } from "gatsby";
 import "./pagestyles.css";
 import Layout from "../components/Layout";
-import styled from "styled-components";
+// import styled from "styled-components";
 import ProjectComponent from "../components/ProjectComponent";
 import { Container, Row, Col } from "react-bootstrap";
 import Img from "gatsby-image";
 
 
-const IndexCarouselSection = styled.div`
-    background-color: white;
-    color: #7BC366;
-    padding: 6% 14% 8% 14%;
-    height: 50%;
-    @media only screen and (max-width: 600px) {
-        #projects-section-description { //media query
-        // font-size: 13px;
-        width: 100%;
-        }
-    }
-    .slick-prev:before,
-    .slick-next:before {
-        color: #7BC366;
-    }
-`
-const projectsGallery = styled.div`
-    display: flex;
-`
+// const IndexCarouselSection = styled.div`
+//     background-color: white;
+//     color: #7BC366;
+//     padding: 6% 14% 8% 14%;
+//     height: 50%;
+//     @media only screen and (max-width: 600px) {
+//         #projects-section-description { //media query
+//         // font-size: 13px;
+//         width: 100%;
+//         }
+//     }
+//     .slick-prev:before,
+//     .slick-next:before {
+//         color: #7BC366;
+//     }
+// `
+// const projectsGallery = styled.div`
+//     display: flex;
+// `
 
 const Projects = (props) => (
     <Layout>

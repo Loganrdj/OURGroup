@@ -7,14 +7,11 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./NavBar/Navbar";
 import Footer from "./Footer/Footer";
 import "./layout.css";
 import styled from "styled-components";
-import Logo from "../components/NavBar/Logo";
-import { FaAlignJustify } from "react-icons/fa";
 
 const Wrapper = styled.div`
   display: flex;

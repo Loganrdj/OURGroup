@@ -39,7 +39,7 @@ const Navbar = () => {
             <Link to="/contact" className="nav-link" activeClassName="active-link">CONTACT</Link>
           </div>
           <div>
-            <button id="nav-btn-true" onClick={console.log("hello")}><FaAlignJustify id="nav-btn"/></button>
+            <button id="nav-btn-true" onClick={console.log("hello")}><FaAlignJustify aria-label="hamburger menu" id="nav-btn"/></button>
           </div>
       </div>
     </div>

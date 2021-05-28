@@ -1,5 +1,3 @@
-import React from "react";
-
 const isInBrowser = !!(
     typeof window !== 'undefined' &&
     window.document &&

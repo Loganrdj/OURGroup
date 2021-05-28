@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Img from "gatsby-image";
 import styled from "styled-components";
-import { Link } from "gatsby";
 
 const StyledImage = styled.div`
     border-radius: 1rem;

@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import LogoGreenAbout from "../components/NavBar/LogoGreenAbout";
 import styled from "styled-components";
 import Img from "gatsby-image";
+import { graphql } from 'gatsby';
 
 const AboutBoxDiv1 = styled.div`
     display: flex;

@@ -4,6 +4,7 @@ import "./pagestyles.css";
 import Layout from "../components/Layout";
 import SimpleSlider from "../components/Slider";
 import styled from "styled-components";
+import { graphql } from 'gatsby';
 
 import Img from "gatsby-image";
 
