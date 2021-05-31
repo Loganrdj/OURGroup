@@ -152,12 +152,12 @@ const About = (props) => (
                                 </div>
                             </Col>
                             <Col xs={12} sm={6} md={4} lg={4} xl={4}>
-                                <div class="logo-div non-display">
+                                <div class="logo-div">
                                     <Img fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
                                 </div>
                             </Col>
                             <Col xs={12} sm={12} md={4} lg={4} xl={4}>
-                                <div class="logo-div non-display">
+                                <div class="logo-div">
                                     <Img fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
                                 </div>
                             </Col>
