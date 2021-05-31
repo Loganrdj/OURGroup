@@ -82,18 +82,28 @@ body::-webkit-scrollbar {
 }
 #about-box-div-5 {
     background-color: #e9eaed;
-    width: 100%;
 }
 #about-box-div-6 {
     height: 300px;
 }
-
+    
 .about-layer-div {
     display: flex;
     flex-flow: row wrap;
     /* margin-left: 14%;
     margin-right: 14%; */
+    
 }
+
+.logo-div {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.about-layer-div #about-box-div-5 {
+    width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'ITCKabelStd-Demi';
 }

@@ -5,6 +5,7 @@ import LogoGreenAbout from "../components/NavBar/LogoGreenAbout";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import { graphql } from 'gatsby';
+import { Container, Row, Col } from "react-bootstrap";
 
 const AboutBoxDiv1 = styled.div`
     display: flex;
@@ -46,25 +47,35 @@ const AboutBoxDiv3 = styled.div`
 const AboutBoxDiv5 = styled.div`
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 100%;
     align-items: center;
     flex-flow: column nowrap;
-    div {
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-        height: 100%;
-        justify-content: space-evenly;
-        div {
-            margin-right: 50px;
-            margin-left: 50px;
-        }
-    }
+    // height: 110vh;
+    // div {
+    //     display: flex;
+    //     flex-flow: row wrap;
+    //     width: 100%;
+    //     height: 100%;
+    //     justify-content: space-evenly;
+    //     div {
+    //         margin-right: 50px;
+    //         margin-left: 50px;
+    //     }
+    // }
     h1 {
         color: #7BC366;
         margin-bottom: 100px;
         margin-top: 100px;
+    }
+    .container {
+        .row {
+            margin-bottom: 150px !important;
+            @media only screen and (max-width: 768px) {
+                margin-bottom: 40px !important;
+            }
+            @media only screen and (max-width: 600px) {
+                margin-bottom: 20px !important;
+            }
+        }
     }
     
 `
@@ -108,47 +119,72 @@ const About = (props) => (
             </div>
         </div> 
         <div className="about-layer-div">
-            <div id="about-box-div-5" className="about-box">
+            <div id="about-box-div-5">
                 <AboutBoxDiv5>
                     <h1>CLIENTS</h1>
-                    <div id="logo-div">
-                        <>
-                        <Img fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img class="non-display" fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img class="non-display" fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img class="non-display" fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img class="non-display" fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img class="non-display" fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                        <>
-                        <Img class="non-display" fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
-                        </>
-                    </div>
+                    <Container>
+                        <Row class="logo-row">
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div">
+                                    <Img fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div">
+                                    <Img fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div">
+                                    <Img fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div">
+                                    <Img fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row class="logo-row">
+                            <Col xs={12} sm={6} md={4} lg={4} xl={4}>
+                                <div class="logo-div">
+                                    <Img fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={6} md={4} lg={4} xl={4}>
+                                <div class="logo-div non-display">
+                                    <Img fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={12} md={4} lg={4} xl={4}>
+                                <div class="logo-div non-display">
+                                    <Img fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row class="logo-row">
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div non-display">
+                                    <Img fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div non-display">
+                                    <Img fixed={props.data.logos.edges[0].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div non-display">
+                                    <Img fixed={props.data.logos.edges[1].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                            <Col xs={12} sm={6} md={3} lg={3} xl={3}>
+                                <div class="logo-div non-display">
+                                    <Img fixed={props.data.logos.edges[2].node.childImageSharp.fixed} alt="This is a placeholder building image" />
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </AboutBoxDiv5>
             </div>
         </div> 
@@ -171,7 +207,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 1200, maxHeight: 800) {
+            fluid(maxWidth: 600, maxHeight: 800) {
               ...GatsbyImageSharpFluid
             }
           }

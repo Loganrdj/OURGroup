@@ -11,7 +11,7 @@
 //         module: {
 //           rules: [
 //             {
-//               test: /Navbar/,
+//               test: /Navbar-js/,  //Try this or Navbar for window build issue
 //               use: loaders.null(),
 //             },
 //           ],
