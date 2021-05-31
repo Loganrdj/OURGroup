@@ -30,12 +30,10 @@ import Img from "gatsby-image";
 
 const Projects = (props) => (
     <Layout>
-        
         <Container>
             <Row>
                 <h1 className="margin-up">PROJECTS</h1>
             </Row>
-            
             <Row className="projects-row">
                 <Col xs={12} sm={6} md={6} lg={4} xl={3}>
                     <Img className="grayscale-image" fluid={props.data.allFile.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image"/>
