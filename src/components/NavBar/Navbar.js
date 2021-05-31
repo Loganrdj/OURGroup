@@ -17,7 +17,7 @@ function openNav() {
 // const isBrowser = typeof window !== "undefined";
 const Navbar = () => {
   
-  const [pathBool, setpathBool] = useState(false);
+  const [pathBool, setpathBool] = useState("");
   // componentDidMount(){
   //   if (isBrowser) {
   //     // window = "";
@@ -26,13 +26,19 @@ const Navbar = () => {
   useEffect(()=> {
     if(isInBrowser) {
       var pathCheck = window.location.pathname;
-      setpathBool(pathCheck.includes("about"));
+      if(pathCheck.includes("about")){
+        setpathBool("about");
+      }
+      if(pathCheck.includes("projects")){
+        setpathBool("projects");
+      }
+      
     }
   }, [])
   
   return (
-    <div className={pathBool ? "navbar-background-image" : ""}>
-      <div className={pathBool ? "navbar green-box" : "navbar"}>
+    <div className={pathBool === "about" ? "navbar-background-image" : pathBool === "projects" ? "navbar-background-image-projects" : ""}>
+      <div className={pathBool === "about" || pathBool === "projects" ? "navbar green-box" : "navbar"}>
           <div className="nav-links">
             <Link to="/" state={{urlTo: "/"}} className="nav-link" activeClassName="active-link">HOME</Link>
             <Link to="/about" state={{urlTo: "about"}} className="nav-link" activeClassName="active-link">ABOUT</Link>
