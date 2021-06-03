@@ -35,6 +35,8 @@ const StyledImage = styled.div`
     }
   `;
 
+
+
 export default function SimpleSlider() {
   var settings = {
     dots: true,
@@ -74,7 +76,7 @@ export default function SimpleSlider() {
       
         <StaticQuery query={graphql`
           query carouselIndexQuery {
-            allFile(filter: {relativePath: {glob: "building-project*"}}) {
+            allFile(filter: {relativeDirectory: {glob: "Project-*"}}) {
               edges {
                 node {
                   childImageSharp {
@@ -87,53 +89,22 @@ export default function SimpleSlider() {
             }
           }
             `} 
-            render={data => (
+            render={data => {
+              const imageDivs = data.allFile.edges.map(image => {
+                return (
+                  <div>
+                    <StyledImage>
+                      <Img fluid={image.node.childImageSharp.fluid} alt="project image alt"/>
+                    </StyledImage>
+                  </div>
+                )
+              })
+
+              return(
                 <Slider {...settings}>
-                    <div>
-                        <StyledImage>
-                        {/* <Link to="/projectOne" state={{urlTo: "/projectOne"}}> */}
-                          <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} alt="projectOne Image"/>
-                        {/* </Link> */}
-                        {/* <p>hello</p> */}
-                        </StyledImage>
-                    </div>
-                    <div>
-                        <StyledImage>
-                          {/* <Link to="/projectOne" state={{urlTo: "/projectOne"}}> */}
-                            <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} alt="projectOne Image"/>
-                          {/* </Link> */}
-                        </StyledImage>
-                    </div>
-                    <div>
-                        <StyledImage>
-                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
-                            <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} alt="projectTwo Image"/>
-                          {/* </Link> */}
-                        </StyledImage>
-                    </div>
-                    <div>
-                        <StyledImage>
-                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
-                            <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid} alt="projectTwo Image"/>
-                          {/* </Link> */}
-                        </StyledImage>
-                    </div>
-                    <div>
-                        <StyledImage>
-                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
-                            <Img fluid={data.allFile.edges[4].node.childImageSharp.fluid} alt="projectTwo Image"/>
-                          {/* </Link> */}
-                        </StyledImage>
-                    </div>
-                    <div>
-                        <StyledImage>
-                          {/* <Link to="/projectTwo" state={{urlTo: "/projectTwo"}}> */}
-                            <Img fluid={data.allFile.edges[5].node.childImageSharp.fluid} alt="HelprojectTwo Imagelo"/>
-                          {/* </Link> */}
-                        </StyledImage>
-                    </div>
+                    { imageDivs }
                 </Slider>
-            )}
+            )}}
         />
     );
   }

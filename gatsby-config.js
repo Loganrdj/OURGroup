@@ -9,6 +9,7 @@ module.exports = {
     data: ['item 1', 'item 2'],
     portfolioData: [
       {
+        id: 1,
         name: "BVLGARI Hotel (Former Chamber of Commerce)",
         type: "Restoration",
         location: "Shanghai",
@@ -21,6 +22,7 @@ module.exports = {
         secondDescription: "This project embodies the exemplary protection and utilization of architectural heritage from four aspects: the protective restoration of the building itself, the diverse presentation of heritage values, the standardized implementation of work procedures, and the multi-level promotion of cultural protection."
       },
       {
+        id: 2,
         name: "Wuhan LanLing District - Urban Planning",
         type: "Urban Renewal / Cultural and Tourism",
         location: "Wuhan",
@@ -33,6 +35,7 @@ module.exports = {
         secondDescription: "It amplifies diversity by strengthening cultural recognition and increasing cultural experience places for exploring ancient sources, showing how the diversity of history and culture is formed, and by creating a global model of future life. It is suitable for social groups of all ages and forms a diversity of social structure."
       },
       {
+        id: 3,
         name: "Nanjing BaiZiTing - Heritage Precinct",
         type: "Urban Renewal",
         location: "Nanjing",
@@ -45,6 +48,7 @@ module.exports = {
         secondDescription: ""
       },
       {
+        id: 4,
         name: "Shandong - Outlet Mall",
         type: "Leisure and Tourism Real Estate",
         location: "Shandong",
@@ -57,6 +61,7 @@ module.exports = {
         secondDescription: ""
       },
       {
+        id: 5,
         name: "Suzhou Riverbank Redevelopment",
         type: "Urban Renewal",
         location: "Shanghai",
@@ -69,6 +74,7 @@ module.exports = {
         secondDescription: ""
       },
       {
+        id: 6,
         name: "TaiLaiFang & TongYiLi - Urban Renewal",
         type: "Urban Repurposing",
         location: "Shanghai",
@@ -81,6 +87,7 @@ module.exports = {
         secondDescription: ""
       },
       {
+        id: 7,
         name: "Rockbund",
         type: "Urban Renewal",
         location: "Shanghai",
@@ -93,6 +100,7 @@ module.exports = {
         secondDescription: ""
       },
       {
+        id: 8,
         name: "Xian Textile City",
         type: "Urban Renewal / Real Estate",
         location: "Xian",
@@ -105,6 +113,7 @@ module.exports = {
         secondDescription: ""
       },
       {
+        id: 9,
         name: "Wuhan XianAn Estate - Restoration",
         type: "Heritage Building",
         location: "Wuhan",
@@ -117,6 +126,7 @@ module.exports = {
         secondDescription: ""
       },
       {
+        id: 10,
         name: "Zhang Yuan - Preservation Project",
         type: "Urban Repurposing",
         location: "Shanghai",

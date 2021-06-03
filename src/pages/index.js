@@ -77,46 +77,37 @@ const IndexCarouselSection = styled.div`
   }
 `
 
-const IndexPage = (props) => (
-  <Layout>
-    <CarouselStyled>
-      <Carousel>
-        <Carousel.Item>
-          <Img fluid={props.data.allFile.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
-          <Carousel.Caption>
-            <p>This is the first slide</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Img fluid={props.data.allFile.edges[1].node.childImageSharp.fluid} alt="This is a placeholder building image" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <Img fluid={props.data.allFile.edges[2].node.childImageSharp.fluid} alt="This is a placeholder building image" />
-        </Carousel.Item>
-        <Carousel.Item>
-        <Img fluid={props.data.allFile.edges[3].node.childImageSharp.fluid} alt="This is a placeholder building image" />
-        </Carousel.Item>
-      </Carousel>
-      <IndexContentDiv>
-        <h1 id="index-title">WELCOME TO OUR GROUP.</h1>
-        <p id="index-description">We are a seasoned architecture firm that specializes in urban renewal. <Link to="/projects" className="index-description-link">Here</Link> is some information about our company, and <Link to="/projects" className="index-description-link">here</Link> are some of our latest projects. <br></br><br></br> If you'd like to know more about us, please feel free to <Link to="/projects" className="index-description-link">reach out.</Link></p>
-      </IndexContentDiv>
-    </CarouselStyled>
-    <IndexCarouselSection>
-      <div id="carousel-wrapper">
-        <h2 id="section-description">SOME OF OUR LATEST PROJECTS</h2>
-        <Link to="/projects" id="project-carousel-link">View All ›</Link>
-      </div>
-      <SimpleSlider></SimpleSlider>
-    </IndexCarouselSection>
-  </Layout>
-)
+const IndexPage = (props) => {
+  const displayImages = props.data.allFile.edges.map(image => {
+    return (<Carousel.Item><Img fluid={image.node.childImageSharp.fluid} alt="Home page image"></Img></Carousel.Item>)
+  })
+  return(
+    <Layout>
+      <CarouselStyled>
+        <Carousel>
+          { displayImages }
+        </Carousel>
+        <IndexContentDiv>
+          <h1 id="index-title">WELCOME TO OUR GROUP.</h1>
+          <p id="index-description">We are a seasoned architecture firm that specializes in urban renewal. <Link to="/projects" className="index-description-link">Here</Link> is some information about our company, and <Link to="/projects" className="index-description-link">here</Link> are some of our latest projects. <br></br><br></br> If you'd like to know more about us, please feel free to <Link to="/projects" className="index-description-link">reach out.</Link></p>
+        </IndexContentDiv>
+      </CarouselStyled>
+      <IndexCarouselSection>
+        <div id="carousel-wrapper">
+          <h2 id="section-description">SOME OF OUR LATEST PROJECTS</h2>
+          <Link to="/projects" id="project-carousel-link">View All ›</Link>
+        </div>
+        <SimpleSlider></SimpleSlider>
+      </IndexCarouselSection>
+    </Layout>
+  )
+}
 
 export default IndexPage
 
 export const query = graphql`
   query building {
-    allFile(filter: {relativePath: {glob: "building*"}}) {
+    allFile(filter: {relativeDirectory: {glob: "Project-*"}, name: {glob: "display*"}}) {
       edges {
         node {
           childImageSharp {
@@ -126,6 +117,6 @@ export const query = graphql`
           }
         }
       }
-    }
+  }
   }
 `
