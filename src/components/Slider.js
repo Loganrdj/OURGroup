@@ -11,7 +11,7 @@ const StyledImage = styled.div`
     padding-right: 10px;
     max-width: 80rem;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     // margin-bottom: 2rem;
     /* Extra large TV screens */
     @media screen and (min-width: 1200px) { 

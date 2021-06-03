@@ -106,17 +106,20 @@ const IndexPage = (props) => {
 export default IndexPage
 
 export const query = graphql`
-  query building {
-    allFile(filter: {relativeDirectory: {glob: "Project-*"}, name: {glob: "display*"}}) {
-      edges {
-        node {
-          childImageSharp {
-            fluid(maxWidth: 1500, maxHeight: 1000) {
-              ...GatsbyImageSharpFluid
-            }
+query building {
+  allFile(
+    filter: {relativeDirectory: {glob: "Project-*"}, name: {glob: "display*"}}
+    sort: {fields: relativePath}
+  ) {
+    edges {
+      node {
+        childImageSharp {
+          fluid(maxWidth: 1500, maxHeight: 1000) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
+    }
   }
-  }
+}
 `

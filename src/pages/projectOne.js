@@ -131,6 +131,7 @@ query projectOneQuery {
         work
         location
         designperiod
+        summary
         firstDescription
         secondDescription
       }
