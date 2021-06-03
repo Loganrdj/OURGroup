@@ -89,7 +89,7 @@ const IndexPage = (props) => {
         </Carousel>
         <IndexContentDiv>
           <h1 id="index-title">WELCOME TO OUR GROUP.</h1>
-          <p id="index-description">We are a seasoned architecture firm that specializes in urban renewal. <Link to="/projects" className="index-description-link">Here</Link> is some information about our company, and <Link to="/projects" className="index-description-link">here</Link> are some of our latest projects. <br></br><br></br> If you'd like to know more about us, please feel free to <Link to="/projects" className="index-description-link">reach out.</Link></p>
+          <p id="index-description">We are a seasoned architecture firm that specializes in urban renewal. <Link to="/about" className="index-description-link">Here</Link> is some information about our company, and <Link to="/projects" className="index-description-link">here</Link> are some of our latest projects. <br></br><br></br> If you'd like to know more about us, please feel free to <Link to="/contact" className="index-description-link">reach out.</Link></p>
         </IndexContentDiv>
       </CarouselStyled>
       <IndexCarouselSection>

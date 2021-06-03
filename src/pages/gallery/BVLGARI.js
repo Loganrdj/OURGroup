@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from "gatsby";
-import "./pagestyles.css";
-import Layout from "../components/Layout";
-import SimpleSlider from "../components/Slider";
+import "./../pagestyles.css";
+import Layout from "../../components/Layout";
+import SimpleSlider from "../../components/Slider";
 import styled from "styled-components";
 import { graphql } from 'gatsby';
 
@@ -26,13 +26,14 @@ const IndexCarouselSection = styled.div`
 `
 
 const ProjectDetailDiv = styled.div`
+    margin-top: -80px;
     display: flex;
     flex-direction: row;
     background-color: #7BC366;
     justify-content: center;
     .project-description-div {
-      margin-left: 7%;
-      width: 19%;
+      margin-left: 10%;
+      width: 28%;
       position: -webkit-sticky;
       position: sticky;
       top: 20px;
@@ -49,7 +50,8 @@ const ProjectDetailDiv = styled.div`
     .project-body-div {
       width: 100%;
       justify-content: center;
-      margin-right: 7%;
+      margin-left: 7%;
+      margin-right: 14%;
       color: white;
     }
     .split-image-div {
@@ -65,34 +67,39 @@ const ProjectDetailDiv = styled.div`
     }
 `
 
-const projectOne = (data) => (
+const projectOne = (data) => {
+
+  const currentPage = data.data.site.siteMetadata.portfolioData[0];
+  const currentPageImages = data.data.allFile;
+
+  return(
     <Layout>
       <ProjectDetailDiv>
         <div className="project-description-div">
-          <h6>{data.data.site.siteMetadata.portfolioData[0].name}</h6>
+          <h6>{currentPage.name}</h6>
           <p className="project-title-strong">Owner:</p>
-          <p>{data.data.site.siteMetadata.portfolioData[0].owner}</p>
+          <p>{currentPage.owner}</p>
           <p className="project-title-strong">Scale: </p>
-          <p>{data.data.site.siteMetadata.portfolioData[0].scale}</p>
+          <p>{currentPage.scale}</p>
           <p className="project-title-strong">Location:</p>
-          <p>{data.data.site.siteMetadata.portfolioData[0].location}</p>
+          <p>{currentPage.location}</p>
         </div>
         
         <div className="project-body-div">
           <div>
-            <Img className="project-image" fluid={data.data.allFile.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
+            <Img className="project-image" fluid={currentPageImages.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
           </div>
-          <p>{data.data.site.siteMetadata.portfolioData[0].firstDescription}</p>
+          <p>{currentPage.firstDescription}</p>
           <div className="split-image-div">
-            <Img className="project-image" fluid={data.data.allFile.edges[1].node.childImageSharp.fluid} alt="This is a placeholder building image" />
-            <Img className="project-image" fluid={data.data.allFile.edges[2].node.childImageSharp.fluid} alt="This is a placeholder building image" />
+            <Img className="project-image" fluid={currentPageImages.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
+            <Img className="project-image" fluid={currentPageImages.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
           </div>
-          <p>{data.data.site.siteMetadata.portfolioData[0].secondDescription}</p>
+          <p>{currentPage.secondDescription}</p>
           <div>
-            <Img className="project-image" fluid={data.data.allFile.edges[3].node.childImageSharp.fluid} alt="This is a placeholder building image" />
+            <Img className="project-image" fluid={currentPageImages.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
           </div>
           <div>
-            <Img className="project-image" fluid={data.data.allFile.edges[4].node.childImageSharp.fluid} alt="This is a placeholder building image" />
+            <Img className="project-image" fluid={currentPageImages.edges[0].node.childImageSharp.fluid} alt="This is a placeholder building image" />
           </div>
         </div>
       </ProjectDetailDiv>
@@ -104,13 +111,13 @@ const projectOne = (data) => (
       <SimpleSlider></SimpleSlider>
       </IndexCarouselSection>
     </Layout>
-)
+)}
   
 export default projectOne
 
 export const query = graphql`
 query projectOneQuery {
-  allFile(filter: {relativePath: {glob: "building-project*"}}) {
+  allFile(filter: {relativeDirectory: {glob: "Project-1-*"}}) {
     edges {
       node {
         childImageSharp {

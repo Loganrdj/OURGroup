@@ -76,7 +76,7 @@ export default function SimpleSlider() {
       
         <StaticQuery query={graphql`
           query carouselIndexQuery {
-            allFile(filter: {relativeDirectory: {glob: "Project-*"}}) {
+            allFile(filter: {relativeDirectory: {glob: "Project-*"}} sort: {fields: relativeDirectory}) {
               edges {
                 node {
                   childImageSharp {

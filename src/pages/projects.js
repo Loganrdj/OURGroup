@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby";
 import "./pagestyles.css";
 import Layout from "../components/Layout";
 // import styled from "styled-components";
-import ProjectComponent from "../components/ProjectComponent";
 import { Container, Row, Col } from "react-bootstrap";
 import Img from "gatsby-image";
 
@@ -36,12 +35,16 @@ const Projects = (props) => (
             </Row>
             <Row className="projects-row">
                 <Col xs={12} sm={6} md={6} lg={4} xl={3}>
-                    <Img className="grayscale-image" fluid={props.data.Project1.childImageSharp.fluid} alt="This is a placeholder building image"/>
+                    <Link to="/gallery/BVLGARI">
+                        <Img className="grayscale-image" fluid={props.data.Project1.childImageSharp.fluid} alt="This is a placeholder building image"/>
+                    </Link>
                     <h6>BVLGARI Hotel (Former Chamber of Commerce)</h6>
                     <p>OCT Group</p>
                 </Col>
                 <Col xs={12} sm={6} md={6} lg={4} xl={3}>
-                <Img className="grayscale-image" fluid={props.data.Project2.childImageSharp.fluid !== undefined ? props.data.Project2.childImageSharp.fluid : ""} alt="This is a placeholder building image"/>
+                    <Link to="/gallery/LanLingDistrict">
+                        <Img className="grayscale-image" fluid={props.data.Project2.childImageSharp.fluid !== undefined ? props.data.Project2.childImageSharp.fluid : ""} alt="This is a placeholder building image"/>
+                    </Link>
                     <h6>Wuhan LanLing District - Urban Planning</h6>
                     <p>Wuhan Tourism Development Investment Group Co., Ltd.</p>
                 </Col>
