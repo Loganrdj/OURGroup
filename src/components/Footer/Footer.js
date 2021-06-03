@@ -75,7 +75,7 @@ const Footer = () => {
                 </div>
                 <div id="address-div">
                     <p id="address-title"><strong>Address</strong></p>
-                    <p id="address-info">Laborum minim culpa veniam voluptate nulla et fugiat duis incididunt velit ullamco enim voluptate.</p>
+                    <p id="address-info">Building 7, 2241 Ping Liang Road, Yangpu District, Shanghai, PRC 200090</p>
                 </div>
                 <div id="contact-div">
                     <p id="contact-title"><strong>Contact Us</strong></p>
